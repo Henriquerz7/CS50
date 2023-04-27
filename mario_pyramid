@@ -1,0 +1,35 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int get_height(void); // prototype (abstraction)
+
+int main(void)
+{
+    int height = get_height();
+    for(int a = 0; a < height; a++) // lines or height of the pyramide
+    {
+        for(int b = 0; b < height -a -1; b++) // spaces before the first hashes ("#") in each line
+        printf(" ");
+
+        for(int c = 0; c < a + 1; c++) // first hashes ("#") in each line
+        printf("#");
+        
+        printf(" "); // center space
+
+        for(int e = 0; e < a + 1; e++) // second hashes ("#") in each line
+        printf("#");
+
+        printf("\n");
+    }
+}
+
+int get_height(void) // input receiver by user about how high will it be the pyramide
+{
+    int height;
+    do
+    {
+        height = get_int("Height: ");
+    }
+    while (height < 1 || height > 8);
+    return height;
+}
