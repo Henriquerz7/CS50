@@ -1,7 +1,10 @@
+// In the mario program, the goal is to create a pyramid in C, albeit in text, using hashes (#) for bricks. And let’s allow the user to decide just how tall the pyramids should be by
+// first prompting them for a positive integer between, say, 1 and 8, inclusive.
+
 #include <cs50.h>
 #include <stdio.h>
 
-int get_height(void); // prototype (abstraction)
+int get_height(void);
 
 int main(void)
 {
